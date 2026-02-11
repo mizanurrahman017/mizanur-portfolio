@@ -39,7 +39,7 @@ const Banner = () => {
         {/* Right Image */}
         <div className="flex justify-center">
           <img
-            src="https://i.ibb.co/4pDNDk1/avatar.png"
+            src="/src/assets/mizan.jpeg"
             alt="profile"
             className="w-72 md:w-96 rounded-full shadow-lg"
           />
