@@ -1,68 +1,90 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <nav className="w-full bg-white shadow-sm px-6 md:px-12 py-4">
-      <div className="flex items-center justify-between">
-        
-        {/* Logo */}
-        <h1 className="text-2xl font-bold text-purple-600">Portfolio</h1>
+    const navLinkStyle = ({ isActive }) =>
+        isActive
+            ? "text-purple-600 font-semibold"
+            : "hover:text-purple-600";
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <li className="text-purple-600 cursor-pointer">Home</li>
-          <li className="hover:text-purple-600 cursor-pointer">About</li>
-          <li className="hover:text-purple-600 cursor-pointer">Worked</li>
-          <li className="hover:text-purple-600 cursor-pointer">Skills</li>
-          <li className="hover:text-purple-600 cursor-pointer">Education</li>
-          <li className="hover:text-purple-600 cursor-pointer">Contact</li>
-        </ul>
+    return (
+        <nav className="w-full bg-white shadow-sm px-6 md:px-12 py-4">
+            <div className="flex items-center justify-between">
 
-        {/* Desktop Icons */}
-        <div className="hidden md:flex items-center gap-4 text-xl text-gray-700">
-          <a href="https://github.com/mizanurrahman017" target="_blank" rel="noreferrer" className="hover:text-purple-600">
-            <FaGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/mizanur-rahman-asif-599711383/" target="_blank" rel="noreferrer" className="hover:text-purple-600">
-            <FaLinkedin />
-          </a>
-          <a href="mailto:your@email.com" className="hover:text-purple-600">
-            <FaEnvelope />
-          </a>
-        </div>
+                {/* Logo */}
+                <NavLink to="/" className="text-2xl font-bold text-purple-600">
+                    Portfolio
+                </NavLink>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl text-gray-700"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
 
-      {/* Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-gray-700 font-medium">
-          <p className="text-purple-600">Home</p>
-          <p className="hover:text-purple-600 cursor-pointer">About</p>
-          <p className="hover:text-purple-600 cursor-pointer">Worked</p>
-          <p className="hover:text-purple-600 cursor-pointer">Skills</p>
-          <p className="hover:text-purple-600 cursor-pointer">Education</p>
-          <p className="hover:text-purple-600 cursor-pointer">Contact</p>
+                    <li>
+                        <NavLink to="/" className={navLinkStyle}>Home</NavLink>
+                    </li>
 
-          {/* Mobile Icons */}
-          <div className="flex gap-4 text-xl pt-2">
-            <FaGithub className="hover:text-purple-600 cursor-pointer" />
-            <FaLinkedin className="hover:text-purple-600 cursor-pointer" />
-            <FaEnvelope className="hover:text-purple-600 cursor-pointer" />
-          </div>
-        </div>
-      )}
-    </nav>
-  );
+                    <li>
+                        <NavLink to="/about" className={navLinkStyle}>About</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/worked" className={navLinkStyle}>Worked</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/skills" className={navLinkStyle}>Skills</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/education" className={navLinkStyle}>Education</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/contact" className={navLinkStyle}>Contact</NavLink>
+                    </li>
+
+                </ul>
+
+                {/* Desktop Icons */}
+                <div className="hidden md:flex items-center gap-4 text-xl text-gray-700">
+                    <a href="https://github.com/mizanurrahman017" target="_blank" rel="noreferrer" className="hover:text-purple-600">
+                        <FaGithub />
+                    </a>
+                    <a href="https://www.linkedin.com/in/mizanur-rahman-asif-599711383/" target="_blank" rel="noreferrer" className="hover:text-purple-600">
+                        <FaLinkedin />
+                    </a>
+                    <NavLink to="/contact" className="hover:text-purple-600">
+                        <FaEnvelope />
+                    </NavLink>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="md:hidden text-2xl text-gray-700"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    {menuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+            </div>
+
+            {/* Mobile Dropdown */}
+            {menuOpen && (
+                <div className="md:hidden mt-4 space-y-4 text-gray-700 font-medium">
+
+                    <NavLink to="/" className={navLinkStyle}>Home</NavLink>
+                    <NavLink to="/about" className={navLinkStyle}>About</NavLink>
+                    <NavLink to="/worked" className={navLinkStyle}>Worked</NavLink>
+                    <NavLink to="/skills" className={navLinkStyle}>Skills</NavLink>
+                    <NavLink to="/education" className={navLinkStyle}>Education</NavLink>
+                    <NavLink to="/contact" className={navLinkStyle}>Contact</NavLink>
+
+                </div>
+            )}
+        </nav>
+    );
 };
 
 export default Navbar;
