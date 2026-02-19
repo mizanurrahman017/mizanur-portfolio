@@ -1,4 +1,6 @@
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 
 const Banner = () => {
   return (
@@ -7,7 +9,7 @@ const Banner = () => {
         
         {/* Left Content */}
         <div>
-          <h2 className="text-lg md:text-xl  font-semibold mb-2">
+          <h2 className="text-lg md:text-xl font-semibold mb-2">
             # Hello world! I’m
           </h2>
 
@@ -15,8 +17,17 @@ const Banner = () => {
             Mizanur Rahman
           </h1>
 
+          {/* Typewriter Effect */}
           <h3 className="text-2xl md:text-3xl text-gray-600 mt-4">
-            Frontend Web Developer
+            <Typewriter
+              words={["Frontend Web Developer"]}
+              loop={0}      
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
           </h3>
 
           <p className="mt-6 text-gray-500 max-w-lg">
@@ -37,12 +48,10 @@ const Banner = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src="/src/assets/mizan.jpeg"
-            alt="profile"
-            className="w-72 md:w-96 rounded-full shadow-lg"
-          />
+      <div className="flex justify-center"> 
+        <img src="/mizan.jpeg"
+         alt="profile" 
+         className="w-72 md:w-96 rounded-full shadow-lg" /> 
         </div>
       </div>
     </section>

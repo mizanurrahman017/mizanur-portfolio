@@ -1,37 +1,76 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navLinkStyle = ({ isActive }) =>
+    isActive
+      ? "text-purple-600 font-semibold"
+      : "hover:text-purple-600 transition-colors duration-300";
+
   return (
-    <nav className="w-full bg-white shadow-sm px-6 md:px-12 py-4">
+    <nav className="w-full bg-white shadow-sm px-6 md:px-12 py-4 relative">
       <div className="flex items-center justify-between">
         
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-purple-600">Portfolio</h1>
+        <NavLink
+          to="/"
+          className="text-2xl font-bold text-purple-600"
+          onClick={() => setMenuOpen(false)}
+        >
+          Portfolio
+        </NavLink>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <li className="text-purple-600 cursor-pointer">Home</li>
-          <li className="hover:text-purple-600 cursor-pointer">About</li>
-          <li className="hover:text-purple-600 cursor-pointer">Worked</li>
-          <li className="hover:text-purple-600 cursor-pointer">Skills</li>
-          <li className="hover:text-purple-600 cursor-pointer">Education</li>
-          <li className="hover:text-purple-600 cursor-pointer">Contact</li>
+          <li>
+            <NavLink to="/" className={navLinkStyle}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={navLinkStyle}>About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/worked" className={navLinkStyle}>Worked</NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills" className={navLinkStyle}>Skills</NavLink>
+          </li>
+          <li>
+            <NavLink to="/education" className={navLinkStyle}>Education</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={navLinkStyle}>Contact</NavLink>
+          </li>
         </ul>
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center gap-4 text-xl text-gray-700">
-          <a href="https://github.com/mizanurrahman017" target="_blank" rel="noreferrer" className="hover:text-purple-600">
+          <a
+            href="https://github.com/mizanurrahman017"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-purple-600 transition-colors duration-300"
+          >
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/mizanur-rahman-asif-599711383/" target="_blank" rel="noreferrer" className="hover:text-purple-600">
+
+          <a
+            href="https://www.linkedin.com/in/mizanur-rahman-asif-599711383/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-purple-600 transition-colors duration-300"
+          >
             <FaLinkedin />
           </a>
-          <a href="mailto:your@email.com" className="hover:text-purple-600">
+
+          <NavLink
+            to="/contact"
+            className="hover:text-purple-600 transition-colors duration-300"
+          >
             <FaEnvelope />
-          </a>
+          </NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -43,24 +82,74 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-gray-700 font-medium">
-          <p className="text-purple-600">Home</p>
-          <p className="hover:text-purple-600 cursor-pointer">About</p>
-          <p className="hover:text-purple-600 cursor-pointer">Worked</p>
-          <p className="hover:text-purple-600 cursor-pointer">Skills</p>
-          <p className="hover:text-purple-600 cursor-pointer">Education</p>
-          <p className="hover:text-purple-600 cursor-pointer">Contact</p>
+      {/* Mobile Dropdown */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <ul className="flex flex-col gap-5 p-6 text-gray-700 font-medium">
+          <li>
+            <NavLink
+              to="/"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </NavLink>
+          </li>
 
-          {/* Mobile Icons */}
-          <div className="flex gap-4 text-xl pt-2">
-            <FaGithub className="hover:text-purple-600 cursor-pointer" />
-            <FaLinkedin className="hover:text-purple-600 cursor-pointer" />
-            <FaEnvelope className="hover:text-purple-600 cursor-pointer" />
-          </div>
-        </div>
-      )}
+          <li>
+            <NavLink
+              to="/about"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/worked"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              Worked
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/skills"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              Skills
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/education"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              Education
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/contact"
+              className={navLinkStyle}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
