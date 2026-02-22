@@ -1,6 +1,4 @@
-import React from "react";
 import {
-  FaGithub,
   FaEnvelope,
   FaTwitter,
   FaCode,
@@ -8,6 +6,7 @@ import {
   FaDiscord,
   FaSlack,
   FaLinkedin,
+  FaGithub,
 } from "react-icons/fa";
 
 // Contact Data
