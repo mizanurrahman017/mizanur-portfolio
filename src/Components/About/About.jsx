@@ -25,12 +25,7 @@ const About = () => {
             which has sharpened my problem-solving skills.
           </p>
 
-          <p className="text-gray-600 leading-relaxed">
-            I graduated from Sylhet Government Polytechnic Institute with a Diploma
-            in Computer Science & Engineering. Currently, I am pursuing my BSc in
-            Computer Science & Engineering at Sylhet International University,
-            with a strong focus on Artificial Intelligence and Machine Learning.
-          </p>
+        
         </div>
 
         {/* Right Side - Skills */}
@@ -42,7 +37,7 @@ const About = () => {
               <FaGlobe className="text-purple-600" /> Web Development
             </h3>
             <div className="flex flex-wrap gap-3">
-              {["HTML", "CSS", "Tailwind CSS", "JavaScript", "React", "Next.js", "TypeScript", "Firebase", "MongoDB", "Express"].map(skill => (
+              {["HTML", "CSS", "Tailwind CSS", "JavaScript", "React", "Next.js","Firebase"].map(skill => (
                 <span key={skill} className="px-4 py-1 text-sm border border-purple-500 text-purple-600 rounded-full">
                   {skill}
                 </span>
