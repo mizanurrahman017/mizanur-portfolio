@@ -9,7 +9,7 @@ const About = () => {
         {/* Left Side - About Text */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-2">About Me</h2>
-          <h4 className="text-lg text-gray-500 mb-6">Software Development Engineer</h4>
+          <h4 className="text-lg text-gray-500 mb-6">Frontend Developer</h4>
 
           <p className="text-gray-600 mb-4 leading-relaxed">
             I am a Software Development Engineer with 2+ years of professional

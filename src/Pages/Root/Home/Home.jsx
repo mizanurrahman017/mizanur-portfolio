@@ -6,14 +6,14 @@ import Banner from '../../../Components/Banner/Banner';
 import About from '../../../Components/About/About';
 import Service from '../../../Components/Service/Service';
 import Custom from '../../../Components/Custom/Custom';
-import Contact from '../../../Components/Contact/Contact';
+import Contact from './../../../Components/Contact/Contact';
 
 const Home = () => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1000,  // animation speed
-            // once: true,      // একবারই animation হবে
+            duration: 1000, 
+            
             easing: "ease-in-out",
         });
     }, []);

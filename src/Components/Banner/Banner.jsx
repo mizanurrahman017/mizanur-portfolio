@@ -1,27 +1,35 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 
-
 const Banner = () => {
   return (
-    <section className="w-full min-h-screen flex items-center bg-gray-50 px-6 md:px-16 py-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 px-6 md:px-40 pt-28 pb-12 text-white">
+
+      {/* Glow Shapes */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 opacity-30 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-500 opacity-30 rounded-full blur-3xl"></div>
+
+      <div className="relative w-full grid md:grid-cols-2 gap-16 items-center">
+
         {/* Left Content */}
         <div>
-          <h2 className="text-lg md:text-xl font-semibold mb-2">
+          <h2 className="text-lg md:text-xl font-medium text-purple-200 mb-2">
             # Hello world! I’m
           </h2>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-purple-800 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             Mizanur Rahman
           </h1>
 
-          {/* Typewriter Effect */}
-          <h3 className="text-2xl md:text-3xl text-gray-600 mt-4">
+          {/* Typewriter */}
+          <h3 className="text-2xl md:text-3xl text-purple-300 mt-4">
             <Typewriter
-              words={["Frontend Web Developer"]}
-              loop={0}      
+              words={[
+                "Frontend Web Developer",
+                "React Developer",
+                "MERN Stack Developer",
+              ]}
+              loop={0}
               cursor
               cursorStyle="|"
               typeSpeed={70}
@@ -30,29 +38,35 @@ const Banner = () => {
             />
           </h3>
 
-          <p className="mt-6 text-gray-500 max-w-lg">
+          <p className="mt-6 text-purple-100 max-w-xl leading-relaxed">
             I build clean, responsive and user-friendly websites using modern
-            technologies. Passionate about creating beautiful UI and smooth user
-            experiences.
+            technologies. Passionate about crafting beautiful UI and smooth
+            user experiences that make an impact.
           </p>
 
-          <div className="mt-8 flex gap-4">
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 transition">
+          {/* Buttons */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <button className="bg-white text-purple-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 hover:bg-purple-100 transition-all duration-300">
               Hire Me
             </button>
 
-            <button className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition">
+            <button className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
               Download CV
             </button>
           </div>
         </div>
 
         {/* Right Image */}
-      <div className="flex justify-center"> 
-        <img src="/mizan.jpeg"
-         alt="profile" 
-         className="w-72 md:w-96 rounded-full shadow-lg" /> 
+        <div className="flex justify-center relative">
+          <div className="absolute w-96 h-96 bg-purple-500 opacity-30 rounded-full blur-3xl"></div>
+
+          <img
+            src="/mizan.jpeg"
+            alt="profile"
+            className="relative w-72 md:w-[420px] rounded-full border-4 border-white/20 shadow-2xl hover:scale-105 transition-all duration-500"
+          />
         </div>
+
       </div>
     </section>
   );
