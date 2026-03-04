@@ -6,7 +6,7 @@ const About = () => {
     <section className="relative w-full min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-6 md:px-40 py-24">
 
       {/* Top Content */}
-      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24 mb-16">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 mb-16">
         
         {/* Profile Image */}
         <div className="flex-shrink-0">
