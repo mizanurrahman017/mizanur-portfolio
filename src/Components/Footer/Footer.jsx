@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="relative text-center">
         <p className="text-sm md:text-base text-purple-200">
           © 2026 Portfolio | Built with{" "}
-          <span className="text-pink-400 text-lg">💜</span> by{" "}
+           by{" "}
           <span className="text-white font-semibold">
             Mizanur Rahman
           </span>
