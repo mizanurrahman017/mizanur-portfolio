@@ -36,7 +36,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section id="services" className="w-full bg-gray-50 px-6 md:px-16 py-20">
+    <section id="services" className="w-full bg-gray-50 px-6 md:px-16 py-20 bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Title */}

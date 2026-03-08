@@ -49,7 +49,7 @@ const Contract = () => {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen flex items-center justify-center bg-gray-50 px-4 py-16"
+      className="w-full min-h-screen flex items-center justify-center bg-gray-50 px-4 py-16 bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700"
     >
       <div className="max-w-6xl w-full bg-white shadow-xl rounded-2xl grid md:grid-cols-2 overflow-hidden">
 

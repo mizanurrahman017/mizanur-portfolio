@@ -105,6 +105,8 @@ const About = () => {
           );
         })}
       </div>
+      
+      
 
     </section>
   );

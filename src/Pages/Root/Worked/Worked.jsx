@@ -70,7 +70,7 @@ const Worked = () => {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="bg-[#020617] text-white py-28 px-6 md:px-20">
+    <section className="bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700 text-white py-28 px-6 md:px-20">
 
       {/* Title */}
       <div className="text-center mb-14">

@@ -5,7 +5,7 @@ const Custom = () => {
     return (
         <section 
             data-aos="fade-up"
-            className="w-full px-6 md:px-16 py-20"
+            className="w-full px-6 md:px-16 py-20 bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700"
         >
             <div className="max-w-6xl mx-auto bg-gradient-to-r from-purple-50 to-white border border-purple-100 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
 
