@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 const educationData = [
   {
-    title: "B.Sc. in Computer Science and Engineering",
+    title: "Higher Secondary Certificate (HSC)",
     institute: "Sylhet govt. model school and collage (SGMSC)",
     period: "2026 - Present",
     description:
@@ -13,11 +13,11 @@ const educationData = [
     side: "left",
   },
   {
-    title: "Diploma in Computer Science and Engineering (CSE)",
+    title: "Secondary School Certificate (SSC)",
     institute: "Syeda farhana hussain high school (SFHHS)",
     period: "2020 - 2025",
     description:
-      "Focused on Software Development, UI/UX, and Full-Stack Web Technologies.",
+      "GPA: 4.61/5.00",
     side: "right",
   },
 ];
@@ -29,7 +29,7 @@ const Education = () => {
 
   return (
     <section className="py-20 bg-gray-50 relative bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700">
-      <h2 className="text-4xl font-bold text-center mb-12">My Education</h2>
+      <h2 className="text-5xl font-bold text-center text-white mb-12">My Education</h2>
 
       <div className="max-w-6xl mx-auto relative">
         {/* Vertical Timeline Line */}
