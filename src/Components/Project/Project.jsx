@@ -87,7 +87,7 @@ const Project = () => {
                                 className="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-700"
                             >
                                 <FaGithub />
-                                Code
+                                Github
                             </a>
 
                         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaDownload, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router";
 
 const About = () => {
   return (
@@ -53,10 +54,14 @@ const About = () => {
               Resume
             </button>
 
-            <button className="flex items-center gap-2 border border-white/40 px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
+            <NavLink
+              to="/contact"
+              className="flex items-center gap-2 border border-white/40 px-6 py-3 rounded-lg 
+  hover:bg-white hover:text-black transition"
+            >
               <FaEnvelope />
               Lets Connect
-            </button>
+            </NavLink>
 
           </div>
         </motion.div>
@@ -105,8 +110,8 @@ const About = () => {
           );
         })}
       </div>
-      
-      
+
+
 
     </section>
   );

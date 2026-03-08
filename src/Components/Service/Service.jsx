@@ -14,23 +14,23 @@ const services = [
   },
   {
     icon: <FaCodeBranch />,
-    title: "MERN Stack Development",
-    desc: "Building full-stack web applications using MongoDB, Express.js, React, Next.js, TypeScript, Tailwind and Node.js.",
+    title: "React Web Application Development",
+    desc: "Developing fast and dynamic web applications using React.js with reusable components and optimized performance.",
   },
   {
     icon: <FaServer />,
-    title: "Backend Development",
-    desc: "Building secure and scalable server-side applications with modern architectures.",
+    title: "Landing Page Design",
+    desc: "Designing high-converting landing pages for businesses, startups, and products with attractive layouts and smooth animations.",
   },
   {
     icon: <FaDatabase />,
-    title: "Database Design",
-    desc: "Designing optimized and efficient database schemas with performance in mind.",
+    title: "Website Redesign & UI Improvement",
+    desc: "Redesigning old websites with modern UI/UX trends to make them more attractive, responsive, and user-friendly.",
   },
   {
     icon: <FaCogs />,
-    title: "API Development",
-    desc: "Creating clean, scalable, and well-documented RESTful APIs for applications.",
+    title: "Website Performance Optimization",
+    desc: "Improving website speed, performance, and loading time to ensure a smooth and fast user experience.",
   },
 ];
 
@@ -42,9 +42,9 @@ const Service = () => {
         {/* Section Title */}
         <h2 
           data-aos="fade-up"
-          className="text-4xl font-bold text-center mb-14"
+          className="text-5xl font-bold text-center mb-14 text-white"
         >
-          Services <span className="text-purple-600">I Offer</span>
+          Services <span className="text-black-600">I Offer</span>
         </h2>
 
         {/* Service Cards */}

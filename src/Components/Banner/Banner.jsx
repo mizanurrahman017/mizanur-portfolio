@@ -27,7 +27,7 @@ const Banner = () => {
               words={[
                 "Frontend Web Developer",
                 "React Developer",
-                "MERN Stack Developer",
+                
               ]}
               loop={0}
               cursor
