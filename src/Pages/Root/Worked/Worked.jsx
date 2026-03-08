@@ -1,85 +1,168 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
-const experiences = [
+const projects = [
   {
-    title: "Frontend Developer",
-    company: "NeuroDevs Agency",
-    period: "February 2025 - Present",
-    description:
-      "Worked as a Frontend Developer, developing scalable web applications using Next.js and TypeScript. Built modern, responsive user interfaces and implemented robust backend solutions.",
-    skills: ["Next.js", "TypeScript", "Express.js", "JavaScript", "React", "UI/UX", "TailwindCSS"],
-    current: true,
+    id: 1,
+    title: "Syeda Farhana Hussain High School",
+    category: "mern",
+    image: "/SFHHS.jpeg",
+    description: "AI powered fitness and wellness platform.",
+    live: "https://sfhhs.vercel.app/",
+    github: "https://github.com/mizanurrahman017/syeda-farhana-hussain",
   },
   {
-    title: "Software Developer",
-    company: "Sazin Company Ltd.",
-    period: "August 2025 - October 2025",
-    description:
-      "Worked as a Software Developer, developing scalable web applications using Next.js and TypeScript. Built modern, responsive user interfaces and implemented robust backend solutions.",
-    skills: ["HTML", "CSS", "TailwindCSS", "JavaScript", "Next.js", "TypeScript", "Express.js", "MongoDB", "Node.js"],
-    current: false,
+    id: 2,
+    title: "Car Info",
+    category: "react",
+    image: "/carinfo.jpeg",
+    description: "Sports club booking and dashboard system.",
+    live: "https://carinfo-beige.vercel.app/",
+    github: "https://github.com/mizanurrahman017/Car-Details",
+  },
+  {
+    id: 3,
+    title: "Food Expiry Tracker",
+    category: "mern",
+    image: "/Foodbadge.jpeg",
+    description: "Track food expiry dates and reduce waste.",
+    live: "https://food-badge.vercel.app/",
+    github: "https://github.com/mizanurrahman017/FoodBadge",
+  },
+  {
+    id: 4,
+    title: "Kacha Bazar",
+    category: "react",
+    image: "/kacha bazar.jpeg",
+    description: "Plant management system.",
+    live: "https://kacha-bazar-olive.vercel.app/",
+    github: "https://github.com/mizanurrahman017/Kacha-bazar",
+  },
+  {
+    id: 5,
+    title: "INNOVIVE",
+    category: "mern",
+    image: "/INNOVIVE.jpeg",
+    description: "Parcel delivery tracking system.",
+    live: "https://innovive.vercel.app/",
+    github: "https://github.com/mizanurrahman017/Innovive",
+  },
+  {
+    id: 6,
+    title: "MyBank",
+    category: "ui",
+    image: "/mybank.png",
+    description: "Online banking dashboard.",
+    live: "https://your-live-link.com",
+    github: "https://github.com/yourgithub/mybank",
   },
 ];
 
 const Worked = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-    });
-  }, []);
+
+  const [filter, setFilter] = useState("all");
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="py-20 bg-gray-50" id="experience">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 data-aos="fade-up" className="text-center text-purple-600 font-semibold mb-2">
-          EXPERIENCE
-        </h2>
-        <h1 data-aos="fade-up" data-aos-delay="100" className="text-4xl font-bold text-center mb-12">
-          Work Experience
-        </h1>
+    <section className="bg-[#020617] text-white py-28 px-6 md:px-20">
 
-        <div className="relative border-l-2 border-purple-400">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 200} // stagger effect
-              className={`mb-12 ml-6 ${index % 2 === 0 ? "md:ml-0 md:mr-auto" : "md:ml-auto"}`}
-            >
-              <div className="bg-gray-900 text-white p-6 rounded-2xl shadow-md relative">
-                {exp.current && (
-                  <span className="absolute top-4 right-4 bg-purple-600 px-3 py-1 text-xs rounded-full">
-                    CURRENT
-                  </span>
-                )}
-                <h3 className="text-2xl font-semibold mb-1">{exp.title}</h3>
-                <p className="text-purple-400 italic mb-1">{exp.company}</p>
-                <p className="text-gray-400 text-sm mb-4">{exp.period}</p>
-                <p className="text-gray-300 mb-4">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="text-purple-300 text-sm border border-purple-600 px-2 py-1 rounded-full"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* Timeline Dot */}
-          <div className="absolute left-[-8px] top-0 w-4 h-full flex flex-col items-center">
-            <div className="w-4 h-4 bg-purple-600 rounded-full"></div>
-          </div>
-        </div>
+      {/* Title */}
+      <div className="text-center mb-14">
+        <h2 className="text-5xl font-bold mb-4">My Projects</h2>
+        <p className="text-gray-400">Some of the projects I have worked on</p>
       </div>
+
+      {/* Filter Buttons */}
+      <div className="flex justify-center gap-4 mb-14 flex-wrap">
+
+        {["all", "react", "mern", "ui"].map((item) => (
+          <button
+            key={item}
+            onClick={() => setFilter(item)}
+            className={`px-6 py-2 rounded-full capitalize transition
+            ${
+              filter === item
+                ? "bg-cyan-500 text-white"
+                : "bg-slate-800 text-gray-300 hover:bg-slate-700"
+            }`}
+          >
+            {item}
+          </button>
+        ))}
+
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        {filteredProjects.map((project) => (
+
+          <motion.div
+            key={project.id}
+            whileHover={{ scale: 1.04 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="group relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900"
+          >
+
+            {/* Image */}
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-52 object-cover group-hover:scale-110 transition duration-500"
+            />
+
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-black/70 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-cyan-600 px-4 py-2 rounded-lg hover:bg-cyan-700"
+              >
+                <FiExternalLink />
+                Live
+              </a>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-700"
+              >
+                <FaGithub />
+                Code
+              </a>
+
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+
+              <h3 className="text-xl font-semibold mb-2">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm">
+                {project.description}
+              </p>
+
+            </div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
     </section>
   );
 };

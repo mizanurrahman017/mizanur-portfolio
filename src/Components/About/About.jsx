@@ -1,78 +1,131 @@
 import React from "react";
 import { FaDownload, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-6 md:px-40 py-24">
+    <section className="w-full bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700 text-white py-28 px-6 md:px-20 overflow-hidden">
 
-      {/* Top Content */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 mb-16">
-        
-        {/* Profile Image */}
-        <div className="flex-shrink-0">
-          <img
-            src="/mizan.jpeg"
-            alt="profile"
-            className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-purple-600 shadow-lg"
-          />
-        </div>
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 120 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        // viewport={{ once: true }}
+        className="text-4xl md:text-5xl font-bold text-center mb-20"
+      >
+        About Me
+      </motion.h2>
 
-        {/* Text Content */}
-        <div className="max-w-xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Hi, I'm <span className="text-purple-400 font-semibold">Mizanur Rahman</span>, a passionate MERN stack developer who loves bringing ideas to life with clean UI, smooth interactions, and modern web technologies. I enjoy turning complex problems into simple, elegant solutions.
+      {/* Top About Section */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-16 mb-28">
+
+        {/* Image */}
+        <motion.img
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          // viewport={{ once: true }}
+          src="/mizan.jpeg"
+          alt="profile"
+          className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-cyan-400 shadow-xl"
+        />
+
+        {/* Text */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          // viewport={{ once: true }}
+          className="max-w-xl"
+        >
+          <p className="text-gray-300 leading-relaxed mb-6">
+            Hi, I'm <span className="text-cyan-400 font-semibold">Mizanur Rahman</span>,
+            a passionate MERN stack developer who enjoys building modern,
+            responsive and interactive web applications. I love transforming
+            complex ideas into clean and elegant solutions.
           </p>
 
           <div className="flex gap-4 flex-wrap">
-            <a
-              href="/mizan_cv.pdf"
-              className="flex items-center gap-2 px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-full font-semibold transition"
-            >
-              <FaDownload /> Resume
-            </a>
 
-            <a
-              href="/contact"
-              className="flex items-center gap-2 px-6 py-2 border border-purple-500 rounded-full hover:bg-purple-700 transition"
-            >
-              <FaEnvelope /> Let's Connect
-            </a>
+            <button className="flex items-center gap-2 border border-cyan-400 px-6 py-3 rounded-lg hover:bg-cyan-400 hover:text-black transition">
+              <FaDownload />
+              Resume
+            </button>
+
+            <button className="flex items-center gap-2 border border-white/40 px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
+              <FaEnvelope />
+              Lets Connect
+            </button>
+
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Timeline Section */}
-      <div className="relative flex flex-col md:grid md:grid-cols-2 md:gap-8">
+      <div className="relative max-w-6xl mx-auto">
 
-        {/* Vertical line */}
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-purple-600/40 transform -translate-x-1/2"></div>
+        {/* Vertical Line */}
+        <div className="absolute left-1/2 top-0 w-1 h-full bg-cyan-400/30 transform -translate-x-1/2"></div>
 
-        {/* Left Card */}
-        <div className="relative md:pr-8 mb-12 md:mb-0">
-          <div className="md:absolute md:right-1/2 md:translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full top-2"></div>
-          <div className="bg-gray-900/70 border border-purple-600 rounded-xl p-6 shadow-md hover:shadow-purple-500 transition">
-            <h3 className="font-semibold text-xl mb-2">My Programming Journey</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Started with C & C++, then explored Java, and finally found my passion in web development using JavaScript, React, and the MERN stack.
-            </p>
-          </div>
-        </div>
+        {/* Timeline Item */}
+        {timelineData.map((item, index) => {
 
-        {/* Right Card */}
-        <div className="relative md:pl-8">
-          <div className="md:absolute md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full top-2"></div>
-          <div className="bg-gray-900/70 border border-purple-600 rounded-xl p-6 shadow-md hover:shadow-purple-500 transition">
-            <h3 className="font-semibold text-xl mb-2">The Work I Enjoy</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              I love building user-friendly web apps with clean design and interactive features. Problem-solving with elegant, modern solutions is my passion.
-            </p>
-          </div>
-        </div>
+          const isLeft = index % 2 === 0;
 
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: isLeft ? -120 : 120 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              // viewport={{ once: true }}
+              className={`mb-16 flex ${isLeft ? "justify-start" : "justify-end"} w-full`}
+            >
+
+              {/* Card */}
+              <div className={`w-full md:w-1/2 ${isLeft ? "pr-10" : "pl-10"}`}>
+                <div className="relative bg-[#0f172a]/70 border border-cyan-400/40 p-12 rounded-[28px] backdrop-blur-lg shadow-[0_0_25px_rgba(34,211,238,0.2)] hover:shadow-[0_0_45px_rgba(34,211,238,0.4)] transition duration-300">
+
+                  {/* Dot */}
+                  <span className="absolute top-12 -right-14 md:block hidden w-5 h-5 bg-cyan-400 rounded-full border-4 border-[#020617]"></span>
+
+                  <h3 className="text-2xl font-semibold mb-5 text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed max-w-md">
+                    {item.desc}
+                  </p>
+
+                </div>
+              </div>
+
+            </motion.div>
+          );
+        })}
       </div>
+
     </section>
   );
 };
 
+const timelineData = [
+  {
+    title: "My Programming Journey",
+    desc: "I started my programming journey with curiosity about how software works, beginning with C and C++. Over time, I explored Java, and eventually found my passion in web development with JavaScript, React, and the MERN stack."
+  },
+  {
+    title: "The Work I Enjoy",
+    desc: "I love building user-friendly web apps with clean design and interactive features. Problem-solving excites me, and I enjoy working on real-world projects where creativity meets logic."
+  },
+  {
+    title: "Hobbies & Interests",
+    desc: "Outside programming, I enjoy reading tech blogs and exploring creative design. These hobbies keep me energized and bring fresh ideas into my coding work."
+  },
+  {
+    title: "Future Goals",
+    desc: "I aim to deepen my expertise in web development and explore emerging technologies like AI. My goal is to create impactful solutions that enhance user experiences."
+  }
+];
 export default About;

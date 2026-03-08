@@ -7,6 +7,8 @@ import About from '../../../Components/About/About';
 import Service from '../../../Components/Service/Service';
 import Custom from '../../../Components/Custom/Custom';
 import Contact from './../../../Components/Contact/Contact';
+import Skill from '../../../Components/Skill/Skill';
+import Project from '../../../Components/Project/Project';
 
 const Home = () => {
 
@@ -19,9 +21,11 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <div >
             <Banner />
+            <Skill></Skill>
             <About />
+            <Project></Project>
             <Service />
             <Custom />
             <Contact />

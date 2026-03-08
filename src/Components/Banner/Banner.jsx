@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 px-6 md:px-40 pt-28 pb-12 text-white">
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700 px-6 md:px-40 pt-28 pb-20 text-white">
 
       {/* Glow Shapes */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 opacity-30 rounded-full blur-3xl"></div>
@@ -68,6 +68,21 @@ const Banner = () => {
         </div>
 
       </div>
+
+      {/* Bottom Wave */}
+      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <svg
+          viewBox="0 0 1440 200"
+          className="w-full h-[120px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#020617"
+            d="M0,96L120,122.7C240,149,480,203,720,192C960,181,1200,107,1320,69.3L1440,32L1440,200L0,200Z"
+          ></path>
+        </svg>
+      </div> */}
+
     </section>
   );
 };
