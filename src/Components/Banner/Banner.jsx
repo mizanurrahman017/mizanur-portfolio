@@ -61,7 +61,7 @@ const Banner = () => {
           <div className="absolute w-96 h-96 bg-purple-500 opacity-30 rounded-full blur-3xl"></div>
 
           <img
-            src="/public/asif1.jpeg"
+            src="/asif1.jpeg"
             alt="profile"
             className="relative w-72 md:w-[420px] rounded-full border-4 border-white/20 shadow-2xl hover:scale-105 transition-all duration-500"
           />

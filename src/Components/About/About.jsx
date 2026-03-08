@@ -27,7 +27,7 @@ const About = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           // viewport={{ once: true }}
-          src="/public/asif1.jpeg"
+          src="/asif1.jpeg"
           alt="profile"
           className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-cyan-400 shadow-xl"
         />
