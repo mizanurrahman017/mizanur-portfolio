@@ -10,9 +10,9 @@ const skillsData = [
     { name: "JavaScript", category: "language", icon: <FaJs className="text-yellow-400 text-5xl" /> },
     { name: "React.js", category: "frontend", icon: <FaReact className="text-cyan-400 text-5xl" /> },
     { name: "Redux", category: "frontend", icon: <SiRedux className="text-purple-500 text-5xl" /> },
-    { name: "TailwindCSS", category: "tools", icon: <SiTailwindcss className="text-sky-400 text-5xl" /> },
-    { name: "Node.js", category: "backend", icon: <FaNodeJs className="text-green-500 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "TailwindCSS", category: "frontend", icon: <SiTailwindcss className="text-sky-400 text-5xl" /> },
+    { name: "Java", category: "language", icon: <FaNodeJs className="text-green-500 text-5xl" /> },
+    { name: "GitHub", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
 ];
 
 const Skill = () => {

@@ -10,13 +10,13 @@ const skillsData = [
     { name: "JavaScript", category: "language", icon: <FaJs className="text-yellow-400 text-5xl" /> },
     { name: "React.js", category: "frontend", icon: <FaReact className="text-cyan-400 text-5xl" /> },
     { name: "Redux", category: "frontend", icon: <SiRedux className="text-purple-500 text-5xl" /> },
-    { name: "TailwindCSS", category: "tools", icon: <SiTailwindcss className="text-sky-400 text-5xl" /> },
-    { name: "Node.js", category: "backend", icon: <FaNodeJs className="text-green-500 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
-    { name: "Express.js", category: "backend", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "TailwindCSS", category: "frontend", icon: <SiTailwindcss className="text-sky-400 text-5xl" /> },
+    { name: "Java", category: "language ", icon: <FaNodeJs className="text-green-500 text-5xl" /> },
+    { name: "Git", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "GitHub", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "VS Code", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "Netlify", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
+    { name: "Vercel", category: "tools", icon: <SiExpress className="text-gray-300 text-5xl" /> },
     
 ];
 
@@ -49,7 +49,7 @@ const Skill = () => {
             {/* Filter Buttons */}
             <div className="flex justify-center flex-wrap gap-4 mb-14">
 
-                {["all", "frontend", "backend", "language", "tools"].map((item) => (
+                {["all", "frontend",  "language", "tools"].map((item) => (
                     <button
                         key={item}
                         onClick={() => setFilter(item)}
