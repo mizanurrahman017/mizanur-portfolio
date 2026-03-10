@@ -44,7 +44,7 @@ const Skill = () => {
             {/* Filter Buttons */}
             <div className="flex justify-center flex-wrap gap-4 mb-14">
 
-                {["all", "frontend", "backend", "language", "tools"].map((item) => (
+                {["all", "frontend",  "language", "tools"].map((item) => (
                     <button
                         key={item}
                         onClick={() => setFilter(item)}

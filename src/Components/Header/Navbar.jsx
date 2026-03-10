@@ -25,7 +25,7 @@ const Navbar = () => {
           className="text-2xl md:text-3xl font-bold text-white tracking-wide"
           onClick={() => setMenuOpen(false)}
         >
-          Portfolio
+          Mizanur Rahman
         </NavLink>
 
         {/* Desktop Menu */}
