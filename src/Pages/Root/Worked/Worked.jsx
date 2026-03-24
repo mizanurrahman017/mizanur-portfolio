@@ -51,12 +51,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "MyBank",
+    title: "Eid Verse",
     category: "ui",
-    image: "/mybank.png",
-    description: "Online banking dashboard.",
-    live: "https://your-live-link.com",
-    github: "https://github.com/yourgithub/mybank",
+    image: "/eid verse.jpeg",
+    description: "Eid Gettaing .",
+    live: "https://eidverse.vercel.app/",
+    github: "https://github.com/mizanurrahman017/Eid-Verse",
   },
 ];
 
