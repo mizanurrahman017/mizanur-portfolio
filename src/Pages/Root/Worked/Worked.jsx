@@ -7,27 +7,27 @@ const projects = [
   {
     id: 1,
     title: "Syeda Farhana Hussain High School",
-    category: "mern",
+    category: "react",
     image: "/SFHHS.jpeg",
-    description: "AI powered fitness and wellness platform.",
+    description: "Built a responsive school website to improve online presence and communication for students and parents. Designed a clean and user-friendly interface with React and Tailwind CSS, ensuring fast performance and mobile accessibility.",
     live: "https://sfhhs.vercel.app/",
     github: "https://github.com/mizanurrahman017/syeda-farhana-hussain",
   },
   {
     id: 2,
     title: "Car Info",
-    category: "react",
+    category: "ui",
     image: "/carinfo.jpeg",
-    description: "Sports club booking and dashboard system.",
+    description: "Built a modern car information platform that allows users to explore vehicles, view detailed specifications, and easily search through listings. Designed a user-friendly interface with smooth navigation and responsive layout to ensure optimal performance across all devices.",
     live: "https://carinfo-beige.vercel.app/",
     github: "https://github.com/mizanurrahman017/Car-Details",
   },
   {
     id: 3,
     title: "Food Expiry Tracker",
-    category: "mern",
+    category: "react",
     image: "/Foodbadge.jpeg",
-    description: "Track food expiry dates and reduce waste.",
+    description: "Built a modern and responsive food ordering interface to showcase menu items and improve user experience. Developed interactive UI with clean design and smooth navigation, ensuring fast performance and mobile-friendly accessibility.",
     live: "https://food-badge.vercel.app/",
     github: "https://github.com/mizanurrahman017/FoodBadge",
   },
@@ -36,28 +36,28 @@ const projects = [
     title: "Kacha Bazar",
     category: "react",
     image: "/kacha bazar.jpeg",
-    description: "Plant management system.",
+    description: "Built a modern grocery e-commerce platform where users can explore products, manage cart items, and experience seamless navigation. Focused on creating a clean UI and responsive design to improve user experience and accessibility across all devices.",
     live: "https://kacha-bazar-olive.vercel.app/",
     github: "https://github.com/mizanurrahman017/Kacha-bazar",
   },
-  {
-    id: 5,
-    title: "INNOVIVE",
-    category: "mern",
-    image: "/INNOVIVE.jpeg",
-    description: "Parcel delivery tracking system.",
-    live: "https://innovive.vercel.app/",
-    github: "https://github.com/mizanurrahman017/Innovive",
-  },
-  {
-    id: 6,
-    title: "Eid Verse",
-    category: "ui",
-    image: "/eid verse.jpeg",
-    description: "Eid Gettaing .",
-    live: "https://eidverse.vercel.app/",
-    github: "https://github.com/mizanurrahman017/Eid-Verse",
-  },
+  // {
+  //   id: 5,
+  //   title: "INNOVIVE",
+  //   category: "mern",
+  //   image: "/INNOVIVE.jpeg",
+  //   description: "Parcel delivery tracking system.",
+  //   live: "https://innovive.vercel.app/",
+  //   github: "https://github.com/mizanurrahman017/Innovive",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Eid Verse",
+  //   category: "ui",
+  //   image: "/eid verse.jpeg",
+  //   description: "Eid Gettaing .",
+  //   live: "https://eidverse.vercel.app/",
+  //   github: "https://github.com/mizanurrahman017/Eid-Verse",
+  // },
 ];
 
 const Worked = () => {
@@ -81,7 +81,7 @@ const Worked = () => {
       {/* Filter Buttons */}
       <div className="flex justify-center gap-4 mb-14 flex-wrap">
 
-        {["all", "react", "mern", "ui"].map((item) => (
+        {["all", "react", "ui"].map((item) => (
           <button
             key={item}
             onClick={() => setFilter(item)}

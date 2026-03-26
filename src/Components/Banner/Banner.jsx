@@ -13,48 +13,58 @@ const Banner = () => {
 
         {/* Left Content */}
         <div>
-          <h2 className="text-lg md:text-xl font-medium text-purple-200 mb-2">
-            # Hello world! I’m
-          </h2>
+  {/* Intro */}
+  <h2 className="text-lg md:text-xl font-medium text-purple-200 mb-2">
+    # Hello world! I’m
+  </h2>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Mizanur Rahman
-          </h1>
+  {/* Name */}
+  <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+    Mizanur Rahman
+  </h1>
 
-          {/* Typewriter */}
-          <h3 className="text-2xl md:text-3xl text-purple-300 mt-4">
-            <Typewriter
-              words={[
-                "Frontend Web Developer",
-                "React Developer",
-                
-              ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={2000}
-            />
-          </h3>
+  {/* Typewriter - Stronger for client */}
+  <h3 className="text-2xl md:text-3xl text-purple-300 mt-4">
+    <Typewriter
+      words={[
+        "Frontend Web Developer",
+        "React Developer",
+        "Building Modern & Responsive Websites", // added value statement
+      ]}
+      loop={0}
+      cursor
+      cursorStyle="|"
+      typeSpeed={70}
+      deleteSpeed={50}
+      delaySpeed={2000}
+    />
+  </h3>
 
-          <p className="mt-6 text-purple-100 max-w-xl leading-relaxed">
-            I build clean, responsive and user-friendly websites using modern
-            technologies. Passionate about crafting beautiful UI and smooth
-            user experiences that make an impact.
-          </p>
+  {/* Subheadline / value */}
+  <p className="mt-6 text-purple-100 max-w-xl leading-relaxed">
+    I create clean, responsive, and high-performance websites using modern
+    technologies like React, Next.js, and Tailwind CSS. I focus on delivering
+    smooth user experiences and interfaces that make a real impact for businesses and startups.
+  </p>
 
-          {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <button className="bg-white text-purple-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 hover:bg-purple-100 transition-all duration-300">
-              Hire Me
-            </button>
+  {/* Buttons */}
+  <div className="mt-8 flex flex-wrap gap-4">
+    <a
+      href="#contact"
+      className="bg-white text-purple-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 hover:bg-purple-100 transition-all duration-300"
+    >
+      Hire Me
+    </a>
 
-            <button className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
-              Download CV
-            </button>
-          </div>
-        </div>
+    <a
+      href="/Mizanur-Rahman-CV.pdf"
+      target="_blank"
+      className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
+    >
+      Download CV
+    </a>
+  </div>
+</div>
 
         {/* Right Image */}
         <div className="flex justify-center relative">
