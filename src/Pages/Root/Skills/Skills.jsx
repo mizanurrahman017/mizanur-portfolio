@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiRedux, SiTailwindcss, SiExpress } from "react-icons/si";
+
 import { NavLink } from "react-router";
+// comment
+
 
 const skillsData = [
     { name: "HTML", category: "frontend", icon: <FaHtml5 className="text-orange-500 text-5xl" /> },
