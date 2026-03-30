@@ -5,6 +5,7 @@ import { SiRedux, SiTailwindcss, SiExpress } from "react-icons/si";
 
 import { NavLink } from "react-router";
 // comment
+// comment
 
 
 const skillsData = [
