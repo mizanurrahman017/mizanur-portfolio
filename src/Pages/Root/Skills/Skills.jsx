@@ -19,6 +19,8 @@ import {
   SiVercel,
 } from "react-icons/si";
 
+// comment
+
 // Skills Data
 const skillsData = [
   { name: "HTML", category: "frontend", icon: <FaHtml5 className="text-orange-500 text-6xl" /> },
