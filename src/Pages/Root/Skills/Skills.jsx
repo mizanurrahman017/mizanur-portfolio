@@ -20,6 +20,8 @@ import {
 } from "react-icons/si";
 
 // comment
+// comment
+// comment new kore avar kormal
 
 // Skills Data
 const skillsData = [
