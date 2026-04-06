@@ -22,6 +22,7 @@ import {
 // comment
 // comment
 // comment new kore avar kormal
+// new kori abr cmnt korlam
 
 // Skills Data
 const skillsData = [
