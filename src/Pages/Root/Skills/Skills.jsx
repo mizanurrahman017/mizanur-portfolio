@@ -25,6 +25,7 @@ import {
 // new kori abr cmnt korlam
 // new kori abr cmnt korlam
 // new kori again abr cmnt korlam
+// new kori again abr cmnt korlam abar  korbo
 
 // Skills Data
 const skillsData = [
