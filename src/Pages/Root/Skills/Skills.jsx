@@ -19,14 +19,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 
-// comment
-// comment
-// comment new kore avar kormal
-// new kori abr cmnt korlam
-// new kori abr cmnt korlam
-// new kori again abr cmnt korlam
-// new kori again abr cmnt korlam abar  korbo
-// new kori again abar abr cmnt korlam abar  korbo
+// new comment korlam ekon
 
 // Skills Data
 const skillsData = [
