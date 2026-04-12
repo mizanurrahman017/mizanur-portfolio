@@ -18,8 +18,7 @@ import {
   SiNetlify,
   SiVercel,
 } from "react-icons/si";
-
-// new comment korlam ekon
+// ami
 
 // Skills Data
 const skillsData = [
@@ -33,7 +32,7 @@ const skillsData = [
   { name: "Java", category: "language", icon: <FaJava className="text-red-500 text-6xl" /> },
 
   // Tools (fixed)
-  { name: "Git", category: "tools", icon: <FaGitAlt className="text-orange-500 text-6xl" /> },
+new comment korlam ekon  { name: "Git", category: "tools", icon: <FaGitAlt className="text-orange-500 text-6xl" /> },
   { name: "GitHub", category: "tools", icon: <SiGithub className="text-white text-6xl" /> },
   { name: "VS Code", category: "tools", icon: <FaCode className="text-blue-400 text-6xl" /> }, // ✅ FIX
   { name: "Netlify", category: "tools", icon: <SiNetlify className="text-green-400 text-6xl" /> },
