@@ -19,6 +19,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 // ami
+// ami notun kore cmnt korlam
 
 // Skills Data
 const skillsData = [
