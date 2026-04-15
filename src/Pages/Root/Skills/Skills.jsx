@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 // ami
 // ami notun kore cmnt korlam
+// ami notun kore cmnt hea korlam
 
 // Skills Data
 const skillsData = [
