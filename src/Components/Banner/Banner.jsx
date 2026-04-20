@@ -57,7 +57,7 @@ const Banner = () => {
     </a>
 
     <a
-      href="/Mizanur-Rahman-CV.pdf"
+      href="/Asif_Frontend_Developer_Resume_v2.pdf"
       target="_blank"
       className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
     >
