@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+// ami web
 
 const Banner = () => {
   return (
