@@ -93,14 +93,14 @@ const Contract = () => {
           <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <input
               type="text"
-              name="from_name"
+              name="name"
               placeholder="Your Name"
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="email"
-              name="from_email"
+              name="email"
               placeholder="Your Email"
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
