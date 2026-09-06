@@ -16,11 +16,11 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "Car Info",
+        title: "ZESTRO",
         description:
             "Sports club system with role-based dashboard, booking and payment system.",
-        image: "/carinfo.jpeg",
-        live: "https://carinfo-beige.vercel.app/",
+        image: "/image.png",
+        live: "https://zestro-six.vercel.app/",
         github: "https://github.com/mizanurrahman017/Car-Details",
     },
     {
