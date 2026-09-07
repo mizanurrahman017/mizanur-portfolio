@@ -15,12 +15,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Car Info",
+    title: "ZESTRO",
     category: "ui",
-    image: "/carinfo.jpeg",
-    description: "Built a modern car information platform that allows users to explore vehicles, view detailed specifications, and easily search through listings. Designed a user-friendly interface with smooth navigation and responsive layout to ensure optimal performance across all devices.",
-    live: "https://carinfo-beige.vercel.app/",
-    github: "https://github.com/mizanurrahman017/Car-Details",
+    image: "/image.png",
+    description: "Built a modern QR-based restaurant ordering platform that enables customers to explore digital menus, place table-specific orders, and track their orders seamlessly. Designed responsive dashboards for restaurant owners and kitchen staff to efficiently manage menus, tables, and orders across all devices.",
+    live: "https://zestro-six.vercel.app/",
+    github: "https://github.com/mizanurrahman017/zestro",
   },
   {
     id: 3,
